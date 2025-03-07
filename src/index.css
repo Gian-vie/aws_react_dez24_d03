@@ -1,1 +1,25 @@
 @import "tailwindcss";
+
+* {
+  width: 1440px;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@theme {
+  --font-inter: "inter";
+  --font-manrope: "manrope";
+  /* Black */
+  --color-bl900: #0E1422;
+  --color-bl800: #202533;
+  --color-bl700: #333845;
+  --color-bl600: #474B57;
+  --color-bl500: #5C5F6A;
+  --color-bl400: #71747E;
+  --color-bl300: #878A92;
+  --color-bl200: #B6B7BC;
+  --color-bl100: #E6E7E8;
+  /* Red */
+  --color-r900: #BE1313;
+}

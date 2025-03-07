@@ -1,19 +1,58 @@
-import { SignedIn, SignedOut, SignInButton, UserButton } from '@clerk/clerk-react'
+// import { SignedIn, SignedOut } from "@clerk/clerk-react";
+import {
+  Route,
+  Routes,
+  useLocation,
+  useNavigate,
+  matchRoutes,
+} from "react-router";
+import Home from "./pages/Home";
+import { useEffect } from "react";
+import PageNotFoundPage from "./pages/404Error";
+import About from "./pages/About";
+import Shop from "./pages/Shop"
+import Carrinho from "./pages/Carrinho";
+import Perfil from "./pages/Perfil";
 
 
-function App() {
-  
+const routes = [
+  { path: "/" },
+  { path: "/page-not-found" },
+  { path: "/shop"},
+  { path: "/about"},
+  { path: "/perfil"},
+  { path: "/carrinho"},
+];
 
-  return (
-    <>
-      <SignedOut>
-        <SignInButton />
-      </SignedOut>
-      <SignedIn>
-        <UserButton />
-      </SignedIn>
-    </>
-  )
+function RouteValidator() {
+  const location = useLocation();
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    const match = matchRoutes(routes, location);
+    if (!match) {
+      navigate("/page-not-found", { replace: true });
+    }
+  }, [location, navigate]);
+
+  return null;
 }
 
-export default App
+function App() {
+  return (
+    <div>
+      <RouteValidator />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/shop" element={<Shop />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/carrinho" element={<Carrinho />} />
+        <Route path="/perfil" element={<Perfil />} />
+        <Route path="/page-not-found" element={<PageNotFoundPage />} />
+        
+      </Routes>
+    </div>
+  );
+}
+
+export default App;
