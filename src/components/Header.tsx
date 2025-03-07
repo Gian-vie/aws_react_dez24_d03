@@ -3,7 +3,7 @@ import { Link, NavLink } from "react-router";
 const Header = () => {
   // testes
   let temItem: boolean = true;
-  let quanItem: number = 4;
+  let quanItem: number = 5;
   let isLogued: boolean = false;
 
   return (
@@ -11,11 +11,11 @@ const Header = () => {
       <div className="flex items-center bg-bl900 w-full h-10 text-white font-inter text-center">
         <p>Get 25% OFF on your first order. Order Now</p>
       </div>
-      <div className="grid grid-cols-2 items-center h-[84px] max-w-[1116px] mx-auto justify-self-center bg-amber-500">
-        <div className="col-span-1 flex h-10 max-w-[552px] gap-[103px] bg-amber-200">
+      <div className="grid grid-cols-2 items-center h-[84px] max-w-[1098px] mx-auto justify-self-center ">
+        <div className="col-span-1 flex h-10 max-w-[552px] gap-[103px]">
           <Link to="/" className="flex max-w-[170px]">
-            <div className="flex items-center gap-3 max-w-[170px] bg-amber-100 ">
-              <div className="bg-[url('./img/Logomark.svg')] h-10 max-w-10 bg-no-repeat"></div>
+            <div className="flex items-center gap-3 max-w-[170px]">
+              <div className="bg-[url('./img/Logomark1.svg')] h-10 max-w-10 bg-no-repeat"></div>
               <p className="font-manrope font-extrabold text-[20px] text-b900 text-bl900">
                 Ecommerce
               </p>
@@ -60,9 +60,9 @@ const Header = () => {
             </li>
           </ul>
         </div>
-        <div className="col-span-1 flex relative items-center justify-self-end justify-between h-10 max-w-[74px] px-3 bg-amber-200">
+        <div className="col-span-1 flex relative items-center justify-self-end justify-between h-10 max-w-[74px]">
           <Link to="/carrinho" className="max-w-[20px]">
-            <div className="bg-[url('./img/carrinho.svg')] bg-amber-400 max-w-[20px] h-[20px] bg-no-repeat bg-center">
+            <div className="bg-[url('./img/carrinho.svg')] max-w-[20px] h-[20px] bg-no-repeat bg-center">
               {temItem && (
                 <div className="absolute max-w-[15px] left-[12px] top-[23px]">
                   <p className="bg-r900 max-w-[15px] h-[15px] rounded-full text-[10px] text-white text-center">
@@ -76,7 +76,7 @@ const Header = () => {
             {isLogued ? (
               <div></div>
             ) : (
-              <div className="bg-[url('./img/userOff.svg')] bg-amber-400 max-w-[20px] h-[20px] bg-no-repeat bg-center"></div>
+              <div className="bg-[url('./img/userOff.svg')] max-w-[20px] h-[20px] bg-no-repeat bg-center"></div>
             )}
           </Link>
         </div>

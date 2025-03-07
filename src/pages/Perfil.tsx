@@ -1,7 +1,10 @@
+import Header from "../components/Header"
+
 const Perfil = () => {
   return (
     <div>
-      
+        <Header/>
+      perfil
     </div>
   )
 }

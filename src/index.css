@@ -2,8 +2,8 @@
 
 * {
   width: 1440px;
-  margin: 0;
-  padding: 0;
+  /* margin: 0; */
+  /* padding: 0; */
   box-sizing: border-box;
 }
 
@@ -20,6 +20,9 @@
   --color-bl300: #878A92;
   --color-bl200: #B6B7BC;
   --color-bl100: #E6E7E8;
+  /* White */
+  --color-w200: #E9E9EB;
+  --color-w100: #F6F6F6;
   /* Red */
   --color-r900: #BE1313;
 }
