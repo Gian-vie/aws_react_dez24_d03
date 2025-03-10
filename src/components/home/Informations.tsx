@@ -4,7 +4,7 @@ import truckIcon from "../../img/truck.svg"
 
 const Informations = () => {
   return (
-    <div className="flex mt-[88px] max-w-[1092px] h-[266px] justify-between justify-self-center">
+    <div className="flex mt-[88px]  w-[1092px] h-[266px] justify-between justify-self-center">
       <InformationDiv
         logo={"../../img/truck.svg"}
         title={"Free Shipping"}

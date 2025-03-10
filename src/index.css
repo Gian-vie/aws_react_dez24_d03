@@ -1,6 +1,6 @@
 @import "tailwindcss";
 
-* {
+body {
   /* problemas com relação ao tamanho do meu monitor */
   width: 1423px;
   box-sizing: border-box;
