@@ -1,5 +1,4 @@
-import { Link } from "react-router";
-import ButtonStile from "./components/buttonStile";
+import ButtonShop from "../buttons/ButtonShop";
 const TopBaner = () => {
   return (
     <div className="h-[440px] overflow-hidden relative w-full bg-w100 px-[180px] py-[136px]">
@@ -10,9 +9,7 @@ const TopBaner = () => {
         <p className="font-inter  w-fit text-sm mt-3 mb-12 text-bl600">
           Discover Our Newest Collection Today.
         </p>
-        <Link to="/shop">
-          <ButtonStile text={"View Collection"} />
-        </Link>
+        <ButtonShop text={"View Collection"} />
       </div>
       <div className="absolute top-[89px] right-[178px] bg-w200 h-[340px]  w-[340px] rounded-full"></div>
       <div className="absolute top-[92.32px] right-[472px] bg-[url('./img/Burst-pucker.svg')] h-[38px]  w-[38px] rounded-full"></div>
