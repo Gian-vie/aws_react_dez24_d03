@@ -1,12 +1,12 @@
-import Header from "../components/header/Header"
+import Header from "../components/header/Header";
 
 const Perfil = () => {
   return (
     <div>
-        <Header/>
+      <Header />
       perfil
     </div>
-  )
-}
+  );
+};
 
-export default Perfil
+export default Perfil;

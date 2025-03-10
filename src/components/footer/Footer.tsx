@@ -34,7 +34,7 @@ const Footer = () => {
       </div>
       {/* footer principal */}
       <div className="h-[443px]">
-        <div className=" flex h-[364px] h-[364px] w-[1116px] justify-between justify-self-center">
+        <div className=" flex h-[364px] w-[1116px] justify-between justify-self-center">
           <div className="mt-[88px] w-[272px] h-[160px] ">
             <Link to="/" className="flex w-[170px]">
               <div className="flex mb-[22px] items-center gap-3 w-[170px]">
@@ -116,15 +116,15 @@ const Footer = () => {
               ACCEPTED PAYMENTS
             </p>
             <div className="flex items-center mt-13 justify-between w-[176px]">
-              <div className="h-8 w-auto bg-[url('./img/master.svg')] filter grayscale bg-no-repeat "></div>
-              <div className="h-8 w-auto bg-[url('./img/amex.svg')] filter grayscale bg-no-repeat "></div>
-              <div className="h-8 w-auto bg-[url('./img/visa.svg')] filter grayscale bg-no-repeat "></div>
+              <div className="h-8 w-12 bg-[url('./img/visa.svg')] filter grayscale bg-no-repeat "></div>
+              <div className="h-8 w-8 bg-[url('./img/master.svg')] filter grayscale bg-no-repeat "></div>
+              <div className="h-8 w-12 bg-[url('./img/amex.svg')] filter grayscale bg-no-repeat "></div>
             </div>
           </div>
         </div>
         {/* footer base */}
-        <div className=" w-[1116px] h-[79px] flex items-center text-center justify-self-center border-t-[1px] border-w100">
-          <p className="font-inter text-sm text-bl500">
+        <div className=" w-[1116px] h-[79px] flex items-center justify-self-center border-t-[1px] border-w100">
+          <p className="font-inter m-auto text-sm text-bl500">
             © 2023 DevCut. All rights reserved.
           </p>
         </div>

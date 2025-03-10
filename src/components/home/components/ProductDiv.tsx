@@ -14,7 +14,7 @@ const ProductDiv: React.FC<IProductsProps> = ({
   return (
     <div className=" w-64 h-[434px] px-2 py-4">
       <div className="flex items-center justify-items-center overflow-hidden  w-60 h-[312px] bg-w100 rounded-sm">
-        <img
+        <img 
           src={`../../../img/${product}`}
           alt="produto"
         />
