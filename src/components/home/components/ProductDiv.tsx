@@ -1,12 +1,12 @@
 interface IProductsProps {
-  product: string;
+  imageURL: string;
   title: string;
   stock: boolean;
   value: number;
 }
 
 const ProductDiv: React.FC<IProductsProps> = ({
-  product,
+  imageURL,
   title,
   stock,
   value,
@@ -15,7 +15,7 @@ const ProductDiv: React.FC<IProductsProps> = ({
     <div className=" w-64 h-[434px] px-2 py-4">
       <div className="flex items-center justify-items-center overflow-hidden  w-60 h-[312px] bg-w100 rounded-sm">
         <img 
-          src={`../../../img/${product}`}
+          src={imageURL}
           alt="produto"
         />
       </div>

@@ -1,13 +1,17 @@
+import { useState } from "react";
 import Breadcrumb from "../components/Breadcrumb/Breadcrumb"
 import Header from "../components/header/Header"
+import { CheckFilter } from "../components/shop/CheckFilter"
 
 const Shop = () => {
+  const [selectedFilters, setSelectedFilters] = useState<string[]>([]);
   return (
-    <div>
+    <section>
       <Header />
       <Breadcrumb caminho={"Search"} />
-      Shop
-    </div>
+      <CheckFilter handleSelectedFilters={(filters) => setSelectedFilters(filters)} />
+      
+    </section>
   )
 }
 

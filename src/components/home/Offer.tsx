@@ -8,25 +8,25 @@ const Offer = () => {
       </p>
       <div className="flex justify-between justify-self-center w-[1092px]">
         <ProductDiv
-          product={"cover.png"}
+          imageURL={"/public/img/cover.png"}
           title={"titulo camisa"}
           stock={false}
           value={26.599}
         />
         <ProductDiv
-          product={"cover.png"}
+          imageURL={"/public/img/cover.png"}
           title={"titulo camisa"}
           stock={true}
           value={26.5}
         />
         <ProductDiv
-          product={"cover.png"}
+          imageURL={"/public/img/cover.png"}
           title={"titulo camisa"}
           stock={false}
           value={26.599}
         />
         <ProductDiv
-          product={"cover.png"}
+          imageURL={"/public/img/cover.png"}
           title={"titulo camisa"}
           stock={true}
           value={26.5}

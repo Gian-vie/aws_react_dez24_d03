@@ -15,7 +15,6 @@ const Home = () => {
       <BestSelling />
       <MiddleBanner />
       <Offer />
-      {/* <p className="h-70 font-extrabold text-9xl text-center">Home</p> */}
       <Footer />
     </div>
   );

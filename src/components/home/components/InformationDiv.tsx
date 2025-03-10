@@ -1,5 +1,5 @@
 interface InformationDivProps {
-  logo: string;
+  logo: React.ReactNode;
   title: string;
   paragraph: string;
 }
@@ -12,9 +12,8 @@ const InformationDiv: React.FC<InformationDivProps> = ({
   return (
     <div className=" w-[328px] h-[218px] pt-4">
       <div
-        className="h-12  w-12 rounded-full bg-w100 mb-6 bg-center bg-no-repeat"
-        style={{ backgroundImage: `url(${logo})` }}
-      ></div>
+        className="h-12 w-12 py-3.5 justify-items-center rounded-full bg-w100 mb-6 bg-center bg-no-repeat"
+      >{logo}</div>
       <h2 className="font-inter  w-[272px] font-semibold text-[16px] mb-3 text-bl800">
         {title}
       </h2>
