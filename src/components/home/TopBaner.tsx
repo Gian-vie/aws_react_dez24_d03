@@ -1,0 +1,24 @@
+import { Link } from "react-router";
+import ButtonStile from "./components/buttonStile";
+const TopBaner = () => {
+  return (
+    <div className="h-[440px] overflow-hidden relative w-[1440px] bg-w100 px-[180px] py-[136px]">
+      <div className="max-w-fit">
+        <h1 className="font-inter max-w-fit font-semibold text-[32px] text-bl800 tracking-tight">
+          Fresh Arrivals Online
+        </h1>
+        <p className="font-inter max-w-fit text-sm mt-3 mb-12 text-bl600">
+          Discover Our Newest Collection Today.
+        </p>
+        <Link to="/shop">
+          <ButtonStile text={"View Collection"} />
+        </Link>
+      </div>
+      <div className="absolute top-[89px] right-[178px] bg-w200 h-[340px] max-w-[340px] rounded-full"></div>
+      <div className="absolute top-[92.32px] right-[472px] bg-[url('./img/Burst-pucker.svg')] h-[38px] max-w-[38px] rounded-full"></div>
+      <div className="absolute top-[66px] right-[174px] bg-center bg-cover bg-[url('./img/HeroImage.png')] h-[382px] max-w-[255px]"></div>
+    </div>
+  );
+};
+
+export default TopBaner;

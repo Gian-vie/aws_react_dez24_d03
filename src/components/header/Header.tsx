@@ -11,7 +11,7 @@ const Header = () => {
       <div className="flex items-center bg-bl900 w-full h-10 text-white font-inter text-center">
         <p>Get 25% OFF on your first order. Order Now</p>
       </div>
-      <div className="grid grid-cols-2 items-center h-[84px] max-w-[1098px] mx-auto justify-self-center ">
+      <div className="grid grid-cols-2 items-center h-[84px] max-w-[1116px] px-3 border-b border-w100 mx-auto justify-self-center ">
         <div className="col-span-1 flex h-10 max-w-[552px] gap-[103px]">
           <Link to="/" className="flex max-w-[170px]">
             <div className="flex items-center gap-3 max-w-[170px]">

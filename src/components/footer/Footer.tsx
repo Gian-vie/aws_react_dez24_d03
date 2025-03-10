@@ -1,14 +1,36 @@
 import { Link } from "react-router";
 
 const Footer = () => {
+  const handleSubmit = (event: React.FormEvent) => {
+    event.preventDefault();
+  };
+
   return (
     <footer>
       {/* newsletter */}
-      <div>
-        
+      <div className="flex items-center h-[200px] max-w-[1440px] justify-center bg-w100">
+        <div className="flex items-center px-3 max-w-[1116px] justify-between h-[82px]">
+          <div className="h-18 max-w-[387px]">
+            <h2 className="text-2xl max-w-fit font-bold font-inter text-bl900 mb-6">Join Our Newsletter
+            </h2>
+            <p className="text-sm max-w-fit text-bl500 font-inter">We love to surprise our subscribers with occasional gifts.</p>
+          </div>
+          <div className="h-[45px] max-w-[452px] gap-4 flex items-center justify-between">
+            <input
+              placeholder="Your email address"
+              className="h-[45px] min-w-[320px] border border-bl100 focus:outline-none rounded-[6px] px-[15px] text-sm font-medium text-bl300  "
+            />
+            <button
+              onClick={(e) => handleSubmit(e)}
+              className="px-6 py-3 rounded-sm bg-bl900 font-inter font-medium text-sm text-white"
+            >
+              Subscribe
+            </button>
+          </div>
+        </div>
       </div>
       {/* footer principal */}
-      <div className="h-[443px] bg-amber-300">
+      <div className="h-[443px]">
         <div className=" flex max-h-[364px] h-[364px] max-w-[1116px] justify-between justify-self-center">
           <div className="mt-[88px] max-w-[272px] h-[160px] ">
             <Link to="/" className="flex max-w-[170px]">
