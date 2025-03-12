@@ -1,4 +1,4 @@
-import ProductDiv from "./components/ProductDiv";
+import ProductDiv from "../commum/ProductDiv";
 import { Link } from "react-router";
 const BestSelling = () => {
   return (

@@ -1,4 +1,4 @@
-import ProductDiv from "./components/ProductDiv";
+import ProductDiv from "../commum/ProductDiv";
 
 const Offer = () => {
   return (

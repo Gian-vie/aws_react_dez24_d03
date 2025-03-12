@@ -1,0 +1,122 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Floral Perfume",
+      "category": "Perfume",
+      "colors": ["Pink", "Blue", "White"],
+      "sizes": ["50ml", "100ml"],
+      "price": 120.5,
+      "inStock": true,
+      "reviews": 4.5,
+      "images": [
+        "https://acdn-us.mitiendanube.com/stores/004/088/357/products/20240824_134054-695055197cda31032a17245186099280-1024-1024.jpg",
+        "https://baliperfumes.com/pub/media/catalog/product/cache/c70ae39189325524823e3a7bddbfebee/s/c/scand.png"
+      ],
+      "relatedProducts": [2, 3, 4, 5]
+    },
+    {
+      "id": 2,
+      "name": "Running Shoe",
+      "category": "Shoe",
+      "colors": ["Black", "Red", "White"],
+      "sizes": ["38", "40", "42"],
+      "price": 89.9,
+      "inStock": true,
+      "reviews": 5,
+      "images": [
+        "https://png.pngtree.com/png-vector/20231230/ourmid/pngtree-dropshipping-men-hole-sole-jogging-shoes-png-image_11389148.png",
+        "https://static.vecteezy.com/system/resources/previews/046/323/598/non_2x/pair-of-colorful-sports-shoes-for-active-lifestyle-png.png"
+      ],
+      "relatedProducts": [1, 3, 6, 5]
+    },
+    {
+      "id": 3,
+      "name": "Leather Handbag",
+      "category": "Handbag",
+      "colors": ["Brown", "Black", "Beige"],
+      "sizes": ["Small", "Medium", "Large"],
+      "price": 150.0,
+      "inStock": true,
+      "reviews": 4.8,
+      "images": [
+        "https://www.pngplay.com/wp-content/uploads/9/Leather-Bag-Background-PNG-Image.png",
+        "https://www.pngplay.com/wp-content/uploads/12/Handbag-Transparent-Images.png"
+      ],
+      "relatedProducts": [1, 2, 4, 6]
+    },
+    {
+      "id": 4,
+      "name": "Summer Hat",
+      "category": "Hat",
+      "colors": ["Black", "Red", "Blue"],
+      "sizes": ["S", "M", "L"],
+      "price": 45.0,
+      "inStock": true,
+      "reviews": 4.2,
+      "images": [
+        "https://purepng.com/public/uploads/thumbnail//purepng.com-black-hathatsstandard-sizeniceblackround-1421526360754ua06i.png",
+        "https://static.vecteezy.com/system/resources/previews/026/773/881/non_2x/top-hat-with-ai-generated-free-png.png"
+      ],
+      "relatedProducts": [1, 3, 5, 7]
+    },
+    {
+      "id": 5,
+      "name": "Denim Trousers",
+      "category": "Trousers",
+      "colors": ["Blue", "Black", "Gray"],
+      "sizes": ["30", "32", "34", "36"],
+      "price": 99.9,
+      "inStock": true,
+      "reviews": 4.6,
+      "images": [
+        "https://www.pngplay.com/wp-content/uploads/8/Trouser-PNG-Photos.png",
+        "https://www.pngplay.com/wp-content/uploads/8/Blue-Trouser-Transparent-PNG.png"
+      ],
+      "relatedProducts": [2, 4, 6, 8]
+    },
+    {
+      "id": 6,
+      "name": "Steel Thermos",
+      "category": "Thermos",
+      "colors": ["Silver", "Black"],
+      "sizes": ["500ml", "1L"],
+      "price": 75.0,
+      "inStock": true,
+      "reviews": 4.7,
+      "images": [
+        "https://m.media-amazon.com/images/I/61KSEk1epBL._AC_UF894,1000_QL80_.jpg",
+        "https://imagens.aventuraecia.com.br/produtos/arquivos_12074/01.jpg?980"
+      ],
+      "relatedProducts": [1, 3, 7, 9]
+    },
+    {
+      "id": 7,
+      "name": "Casual Sneakers",
+      "category": "Shoe",
+      "colors": ["White", "Gray"],
+      "sizes": ["39", "41", "43"],
+      "price": 110.0,
+      "inStock": true,
+      "reviews": 4.3,
+      "images": [
+        "https://file.aiquickdraw.com/imgcompressed/img/compressed_f8769206cd169f1edea6929c085e5cc1.webp"
+      ],
+      "relatedProducts": [2, 4, 6, 8]
+    },
+    {
+      "id": 8,
+      "name": "Designer Handbag",
+      "category": "Handbag",
+      "colors": ["Red", "Black"],
+      "sizes": ["Medium", "Large"],
+      "price": 175.0,
+      "inStock": true,
+      "reviews": 4.9,
+      "images": [
+        "https://www.pngplay.com/wp-content/uploads/12/High-Fashion-Bag-Transparent-Background.png"
+      ],
+      "relatedProducts": [3, 5, 7, 9]
+    }
+  ]
+}

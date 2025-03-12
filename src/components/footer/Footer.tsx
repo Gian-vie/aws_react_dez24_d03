@@ -7,7 +7,6 @@ const Footer = () => {
 
   return (
     <footer>
-      {/* newsletter */}
       <div className="flex items-center h-[200px] w-full justify-center bg-w100">
         <div className="flex items-center px-3 w-[1116px] justify-between h-[82px]">
           <div className="h-18 w-[387px]">
@@ -32,7 +31,6 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      {/* footer principal */}
       <div className="h-[443px]">
         <div className=" flex h-[364px] w-[1116px] justify-between justify-self-center">
           <div className="mt-[88px] w-[272px] h-[160px] ">
@@ -59,7 +57,6 @@ const Footer = () => {
               </a>
             </div>
           </div>
-
           <div className="flex flex-wrap items-center justify-center mx-auto w-[560px] gap-[72px]">
             <div className="h-[172px] gap-10 w-[95px]">
               <p className="mb-10 font-inter w-[95px] font-medium text-sm text-bl300">
@@ -110,7 +107,6 @@ const Footer = () => {
               </ul>
             </div>
           </div>
-
           <div className="w-[176px] h-[97px] mt-[79px]">
             <p className="font-inter w-[176px] font-medium text-sm text-bl300">
               ACCEPTED PAYMENTS
@@ -122,7 +118,6 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        {/* footer base */}
         <div className=" w-[1116px] h-[79px] flex items-center justify-self-center border-t-[1px] border-w100">
           <p className="font-inter m-auto text-sm text-bl500">
             © 2023 DevCut. All rights reserved.
