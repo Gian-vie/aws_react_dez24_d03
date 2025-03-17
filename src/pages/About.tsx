@@ -1,5 +1,4 @@
 import AboutDev from "../components/about/AboutDev"
-import Header from "../components/header/Header"
 
 const About = () => {
   return (
