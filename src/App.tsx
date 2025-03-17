@@ -13,6 +13,7 @@ import About from "./pages/About";
 import Shop from "./pages/Shop"
 import Carrinho from "./pages/Carrinho";
 import Perfil from "./pages/Perfil";
+import AfterPayment from "./pages/AfterPayment";
 
 
 const routes = [
@@ -22,6 +23,7 @@ const routes = [
   { path: "/about"},
   { path: "/perfil"},
   { path: "/carrinho"},
+  { path: "/after-payment"},
 ];
 
 function RouteValidator() {
@@ -48,6 +50,7 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/carrinho" element={<Carrinho />} />
         <Route path="/perfil" element={<Perfil />} />
+        <Route path="/after-payment" element={<AfterPayment />} />
         <Route path="/page-not-found" element={<PageNotFoundPage />} />
         
       </Routes>

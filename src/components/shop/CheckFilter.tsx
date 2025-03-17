@@ -73,7 +73,7 @@ type Category = {
       },[selectedFilters])
 
   return (
-    <div className="h-[535px] w-[248px] pt-6 pr-3 pb-8 pl-4 border border-bl100">
+    <div className="h-[535px] w-[248px] mt-8 pt-6 pr-3 pb-8 pl-4 border border-bl100">
         <div className="">
             <p className="font-inter font-medium text-sm text-bl900">Categoria</p>
         <div className="grid grid-cols-2 md:flex md:flex-col mt-4 mr-4 mb-10">
