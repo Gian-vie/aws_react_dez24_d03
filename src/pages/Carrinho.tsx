@@ -1,4 +1,5 @@
 import Breadcrumb from "../components/Breadcrumb/Breadcrumb"
+import Cart from "../components/cart/Cart"
 import Header from "../components/header/Header"
 
 const Carrinho = () => {
@@ -6,6 +7,7 @@ const Carrinho = () => {
     <div>
       <Header />
       <Breadcrumb caminho={"Cart"}/>
+      <Cart />
     </div>
   )
 }

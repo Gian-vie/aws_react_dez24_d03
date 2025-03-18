@@ -10,20 +10,21 @@ import Home from "./pages/Home";
 import { useEffect } from "react";
 import PageNotFoundPage from "./pages/404Error";
 import About from "./pages/About";
-import Shop from "./pages/Shop"
+import Shop from "./pages/Shop";
 import Carrinho from "./pages/Carrinho";
 import Perfil from "./pages/Perfil";
 import AfterPayment from "./pages/AfterPayment";
-
+import ProdDetails from "./components/shop/ProdDetails";
 
 const routes = [
   { path: "/" },
   { path: "/page-not-found" },
-  { path: "/shop"},
-  { path: "/about"},
-  { path: "/perfil"},
-  { path: "/carrinho"},
-  { path: "/after-payment"},
+  { path: "/shop" },
+  { path: "/about" },
+  { path: "/perfil" },
+  { path: "/carrinho" },
+  { path: "/after-payment" },
+  { Path: "/detail" },
 ];
 
 function RouteValidator() {
@@ -48,11 +49,11 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/shop" element={<Shop />} />
         <Route path="/about" element={<About />} />
-        <Route path="/carrinho" element={<Carrinho />} />
         <Route path="/perfil" element={<Perfil />} />
+        <Route path="/carrinho" element={<Carrinho />} />
+        <Route path="/detail" element={<ProdDetails />} />
         <Route path="/after-payment" element={<AfterPayment />} />
         <Route path="/page-not-found" element={<PageNotFoundPage />} />
-        
       </Routes>
     </div>
   );

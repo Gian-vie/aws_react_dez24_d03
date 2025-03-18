@@ -1,4 +1,5 @@
 import { Link, NavLink } from "react-router";
+import CartCounter from "../cart/components/CartCounter";
 
 const Header = () => {
   // testes
@@ -62,15 +63,7 @@ const Header = () => {
         </div>
         <div className="col-span-1 flex relative items-center justify-self-end justify-between h-10 w-[74px]">
           <Link to="/carrinho" className="w-[20px]">
-            <div className="bg-[url('./img/carrinho.svg')] w-[20px] h-[20px] bg-no-repeat bg-center">
-              {temItem && (
-                <div className="absolute w-[15px] left-[12px] top-[23px]">
-                  <p className="bg-r900 w-[15px] h-[15px] rounded-full text-[10px] text-white text-center">
-                    {quanItem}
-                  </p>
-                </div>
-              )}
-            </div>
+            <CartCounter />
           </Link>
           <Link to="/perfil" className="w-[20px]">
             {isLogued ? (
