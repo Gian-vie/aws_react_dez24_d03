@@ -1,32 +1,65 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-import { IFormDataPayload } from "../../interface/interfaces";
+import { CartItem, CartState} from "../../interface/interfaces";
 
-interface CartProduct extends IFormDataPayload {
-    amount: number;
-}
 
-const cartSlice = createSlice({
+const initialState: CartState = {
+    count: 0,
+    subTotal: 0,
+    tax: 0,
+    items: [],
+  };
+
+export const cartSlice = createSlice({
     name: "cart",
-    initialState: [] as CartProduct[],
+    initialState,
     reducers: {
-        addToCart: (state, action: PayloadAction<IFormDataPayload>) => {
-            const productIndex = state.findIndex(product => product.id === action.payload.id)
-            if(productIndex !== -1){
-                state[productIndex].amount +=1
-            }else{
-                state.push({...action.payload, amount: 1})
-            }
-        },
-        removeFromCart: (state, action: PayloadAction<string>) => {
-            const productIndex = state.findIndex(product => product.id === action.payload)
-            if(state[productIndex].amount > 1){
-                state[productIndex].amount -= 1;
-            }else {
-                return state.filter(product => product.id !== action.payload)
-            }
+      addItemToCart: (state, action: PayloadAction<CartItem>) => {
+        const index = state.items.findIndex(
+          (item) =>
+            item.productId === action.payload.productId &&
+            item.color === action.payload.color &&
+            item.size === action.payload.size
+        );
+  
+        const item = state.items[index];
+  
+        state.count = state.count + action.payload.qtd;
+        state.subTotal =
+          state.subTotal + action.payload.price * action.payload.qtd;
+  
+        if (item) {
+          state.items[index].qtd = item.qtd + action.payload.qtd;
+          return;
         }
-    }
-})
-
-
-export default cartSlice.reducer ;
+  
+        state.items.push(action.payload);
+      },
+      removeItemFromCart: (state, action: PayloadAction<string>) => {
+        const item = state.items.find((item) => item.id === action.payload);
+        state.items = state.items.filter((item) => item.id !== action.payload);
+        state.count = state.count - item!.qtd;
+        state.subTotal = state.subTotal - item!.price * item!.qtd;
+      },
+      incrementQtdItem: (state, action: PayloadAction<string>) => {
+        const index = state.items.findIndex((item) => item.id === action.payload);
+        const item = state.items[index];
+        item!.qtd = item!.qtd + 1;
+        state.count = state.count + 1;
+        state.subTotal = state.subTotal + item!.price;
+        state.items[index] = item!;
+      },
+      decrementQtdItem: (state, action: PayloadAction<string>) => {
+        const index = state.items.findIndex((item) => item.id === action.payload);
+        const item = state.items[index];
+        if (item!.qtd > 1) {
+          item!.qtd = item!.qtd - 1;
+          state.count = state.count - 1;
+          state.subTotal = state.subTotal - item!.price;
+          state.items[index] = item!;
+        }
+      },
+      updateTax: (state, action: PayloadAction<number>) => {
+        state.tax = action.payload;
+      },
+    },
+  });
