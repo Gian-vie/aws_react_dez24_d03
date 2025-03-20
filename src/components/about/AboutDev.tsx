@@ -64,7 +64,7 @@ const AboutDev = () => {
             </a>
           </li>
           <li className="flex gap-3">
-            <img src="/img/figma.svg" alt="github" />
+            <img src="./img/figma.svg" alt="github" />
             <a
               href="https://www.figma.com/design/5UZJJ8ov2jTbD1QEZoLtMz/Ecommerce-(Community)?node-id=1674-2029&p=f&t=A62vrceFRdkBV0MK-0"
               className="font-manrope font-medium text-sm text-bl500 underline"

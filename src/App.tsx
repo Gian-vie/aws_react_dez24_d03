@@ -24,7 +24,7 @@ const routes = [
   { path: "/perfil" },
   { path: "/carrinho" },
   { path: "/after-payment" },
-  { Path: "/detail" },
+  { path: "/detail" },
 ];
 
 function RouteValidator() {

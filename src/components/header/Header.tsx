@@ -2,9 +2,8 @@ import { Link, NavLink } from "react-router";
 import CartCounter from "../cart/components/CartCounter";
 
 const Header = () => {
+  
   // testes
-  let temItem: boolean = true;
-  let quanItem: number = 5;
   let isLogued: boolean = false;
 
   return (

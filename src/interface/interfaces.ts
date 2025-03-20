@@ -1,6 +1,6 @@
 export interface IFormDataPayload {
   id: string;
-  productId: string;
+  // productId: string;
   name: string;
   category: string;
   description: string;

@@ -1,4 +1,4 @@
-import Header from "../header/Header"
+import Header from "../header/Header";
 
 const ProdDetails = () => {
   return (
@@ -6,7 +6,7 @@ const ProdDetails = () => {
       <Header />
       <h1>detail</h1>
     </div>
-  )
-}
+  );
+};
 
-export default ProdDetails
+export default ProdDetails;
