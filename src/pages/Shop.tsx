@@ -1,8 +1,9 @@
 import { useState } from "react";
-import Breadcrumb from "../components/Breadcrumb/Breadcrumb";
 import Header from "../components/header/Header";
 import { CheckFilter } from "../components/shop/CheckFilter";
 import { SearchFilter } from "../components/shop/searchFilter";
+import Footer from "../components/footer/Footer";
+import BreadcrumbShop from "../components/Breadcrumb/BreadcrumbShop";
 
 const Shop = () => {
   const [selectedFilters, setSelectedFilters] = useState<string[]>([]);
@@ -12,7 +13,7 @@ const Shop = () => {
   return (
     <section>
       <Header />
-      <Breadcrumb caminho={"Search"} />
+      <BreadcrumbShop caminho={"Search"} />
       <div className="flex w-[1116px] justify-self-center">
         <CheckFilter
           maxPrice={maxPrice}
@@ -25,6 +26,7 @@ const Shop = () => {
           filters={selectedFilters}
         />
       </div>
+      <Footer />
     </section>
   );
 };

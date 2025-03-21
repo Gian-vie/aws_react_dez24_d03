@@ -5,12 +5,9 @@ interface BreadcrumbProps {
   caminho: string;
 }
 
-const BreadcrumbOrder: React.FC<BreadcrumbProps> = ({ caminho }) => {
+const BreadcrumbDetails: React.FC<BreadcrumbProps> = ({ caminho }) => {
   return (
-    <div className="w-full h-[174px] py-[49px] px-[162px] bg-g100">
-      <h1 className="h-29px mb-2 font-inter font-bold text-2xl text-bl900">
-        {caminho}
-      </h1>
+    <div className="w-full px-[162px] flex items-center">
       <div className="flex items-center gap-1 h-[25px] w-fit">
         <Link to="/">
           <p className="font-inter font-medium text-sm text-bl500 hover:text-bl800">
@@ -24,4 +21,4 @@ const BreadcrumbOrder: React.FC<BreadcrumbProps> = ({ caminho }) => {
   );
 };
 
-export default BreadcrumbOrder;
+export default BreadcrumbDetails;

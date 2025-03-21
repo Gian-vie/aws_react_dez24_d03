@@ -1,5 +1,5 @@
 export interface IFormDataPayload {
-  id: string;
+  id?: string;
   // productId: string;
   name: string;
   category: string;
@@ -10,6 +10,7 @@ export interface IFormDataPayload {
   inStock: boolean;
   reviews: number;
   imageURL: string;
+  relatedProducts?: string[]
 }
 
 export interface CartState {
