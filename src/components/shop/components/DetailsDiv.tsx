@@ -11,7 +11,7 @@ interface IDetails {
 export function DetailsDiv({ product }: IDetails) {
   return (
     <div>
-      <div className="justify-center mc-4">
+      <div className="justify-center my-4">
         <BreadcrumbDetails caminho={product.name} />
       </div>
       <div className="mx-auto flex items-center justify-between h-[574px] w-[1092px]">

@@ -14,6 +14,7 @@ interface IProductsProps {
 }
 
 const ProductDiv: React.FC<IProductsProps> = ({ produto }) => {
+  console.log("🚀 ~ produto:", produto)
   const prodId = produto.id
   return (
     <div className=" w-64 h-[434px] px-2 py-4">
