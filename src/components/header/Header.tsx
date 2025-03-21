@@ -66,7 +66,7 @@ const Header = () => {
           </Link>
           <Link to="/perfil" className="w-[20px]">
             {isLogued ? (
-              <div></div>
+              <div className="h-12 w-12 bg-purple-500 rounded-full"></div>
             ) : (
               <div className="bg-[url('./img/userOff.svg')] w-[20px] h-[20px] bg-no-repeat bg-center"></div>
             )}

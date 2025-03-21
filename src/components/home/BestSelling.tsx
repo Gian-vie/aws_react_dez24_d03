@@ -42,7 +42,7 @@ const BestSelling = () => {
       </div>
       <div className="flex justify-between justify-self-center w-[1092px]">
         {product.map(
-          (product, index) => index < 4 && <ProductDiv produto={product} />
+          (product, index) => index < 4 && <ProductDiv key={product.id} produto={product} />
         )}
       </div>
     </div>

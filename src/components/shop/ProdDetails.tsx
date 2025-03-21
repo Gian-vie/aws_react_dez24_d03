@@ -5,6 +5,7 @@ import { IFormDataPayload } from "../../interface/interfaces";
 import DetailsDiv from "./components/DetailsDiv";
 import { DescriptionDiv } from "./components/DescriptionDiv";
 import Footer from "../footer/Footer";
+import { ReferencesDiv } from "./components/ReferencesDiv";
 
 export function ProdDetails () {
   const [product, setProduct] = useState<IFormDataPayload>({
@@ -60,7 +61,8 @@ export function ProdDetails () {
     <div>
       <Header />
       <DetailsDiv product={product} />
-      <DescriptionDiv product={product.description} />
+      <DescriptionDiv product={product} />
+      <ReferencesDiv product={product}/>
       <Footer />
     </div>
   );
