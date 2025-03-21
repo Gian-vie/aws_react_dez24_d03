@@ -1,3 +1,4 @@
+import { ChevronRight } from "lucide-react";
 import { Link } from "react-router";
 
 interface BreadcrumbProps {
@@ -16,7 +17,7 @@ const Breadcrumb: React.FC<BreadcrumbProps> = ({ caminho }) => {
             Ecommerce
           </p>
         </Link>
-        <div className="h-6 w-6 bg-center bg-no-repeat bg-[url('./img/rigtGray.svg')]"></div>
+        <ChevronRight color="#71747E" size={20}/>
         <p className="font-inter font-medium text-sm text-bl900">{caminho}</p>
       </div>
     </div>

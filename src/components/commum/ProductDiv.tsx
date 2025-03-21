@@ -1,9 +1,6 @@
-import { Link } from "react-router";
-
 interface IProductsProps {
   produto: {
-    id: string;
-    // productId: string;
+    id?: string;
     name: string;
     category: string;
     description: string;
@@ -17,12 +14,13 @@ interface IProductsProps {
 }
 
 const ProductDiv: React.FC<IProductsProps> = ({ produto }) => {
+  const prodId = produto.id
   return (
     <div className=" w-64 h-[434px] px-2 py-4">
       <div className="flex items-center justify-items-center overflow-hidden w-60 h-[312px] bg-w100 rounded-sm">
-        <Link to="/detail">
+        <a href={`/detail/${prodId}`}>
           <img src={produto.imageURL[0]} alt="produto" />
-        </Link>
+        </a>
       </div>
       <div className="mt-[25px] h-[65px]  w-60">
         <h2 className="font-inter mb-3.5 font-medium text-sm text-bl900  w-fit">

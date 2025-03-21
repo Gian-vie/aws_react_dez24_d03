@@ -1,15 +1,15 @@
 import { useEffect, useState } from "react";
 import { IFormDataPayload } from "../../interface/interfaces";
 import ProductDiv from "../commum/ProductDiv";
+import { Search, ChevronLeft, ChevronRight } from "lucide-react";
 
 interface ICard {
   filters: string[];
   onGetMaxPrice: (maxPrice: number) => void;
-  price: number
+  price: number;
 }
 
 export function SearchFilter({ filters, onGetMaxPrice, price }: ICard) {
-  console.log("🚀 ~ SearchFilter ~ price:", price)
   const [input, setInput] = useState("");
   const [products, setProducts] = useState<IFormDataPayload[]>([]);
   const [filteredProducts, setFilteredProducts] = useState<IFormDataPayload[]>(
@@ -17,6 +17,9 @@ export function SearchFilter({ filters, onGetMaxPrice, price }: ICard) {
   );
   const [page, setPage] = useState<number>(1);
   const [maxPages, setMaxPages] = useState<number>(1);
+  const [jsonItens, setJsonItens] = useState<number>(0);
+  const [minOfPage, setMinOfPage] = useState<number>(1);
+  const [maxOfPage, setMaxOfPage] = useState<number>(9);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -35,6 +38,7 @@ export function SearchFilter({ filters, onGetMaxPrice, price }: ICard) {
           setProducts(data.data);
           setFilteredProducts(data.data);
           setMaxPages(data.pages);
+          setJsonItens(data.items);
           let maxPrice = 0;
           for (let i = 0; i < data.data.length; i++) {
             if (data.data[i].price > maxPrice) {
@@ -54,7 +58,6 @@ export function SearchFilter({ filters, onGetMaxPrice, price }: ICard) {
 
   useEffect(() => {
     let filtered = products;
-    console.log("🚀 ~ useEffect ~ filtered:", filtered)
 
     if (input) {
       filtered.filter((produto) =>
@@ -71,14 +74,14 @@ export function SearchFilter({ filters, onGetMaxPrice, price }: ICard) {
       });
     }
 
-    if (price > 0){
+    if (price > 0) {
       filtered = filtered.filter((produto: IFormDataPayload) => {
-        return produto.price <= price + 10
+        return produto.price <= price + 10;
       });
     }
 
     setFilteredProducts(filtered);
-  }, [input, products, price , filters]);
+  }, [input, products, price, filters]);
 
   const handleFilterInputChange = (value: string) => {
     setInput(value);
@@ -87,35 +90,54 @@ export function SearchFilter({ filters, onGetMaxPrice, price }: ICard) {
   const HandlePrev = () => {
     if (1 < page) {
       setPage(page - 1);
+      setMinOfPage(minOfPage - 9);
+      if (page === maxPages) {
+        setMaxOfPage(maxOfPage - (jsonItens % 9));
+      } else {
+        setMaxOfPage(maxOfPage - 9);
+      }
     }
   };
   const HandleNext = () => {
     if (maxPages > page) {
       setPage(page + 1);
+      setMinOfPage(minOfPage + 9);
+      if (maxOfPage + 9 > jsonItens) {
+        setMaxOfPage(maxOfPage + (jsonItens % 9));
+      } else {
+        setMaxOfPage(maxOfPage + 9);
+      }
     }
   };
 
   return (
     <section className="mt-10 pb-26 px-7 w-full">
-      <input
-        className=""
-        value={input}
-        placeholder="search by name"
-        onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
-          handleFilterInputChange(e.target.value)
-        }
-      />
-      <p>
-        page {page} de {maxPages}
+      <div className="flex ml-[29px] mb-6 w-[813px] items-end justify-end">
+        <div className="h-[45px] w-[264px] py-[10px] focus:outline-none border border-bl100 rounded-md flex items-center">
+          <Search color="#878A92" className="ml-[10px]" />
+          <input
+            className="h-[45px] w-full focus:outline-none px-[15px] text-bl300 text-sm font-inter font-medium"
+            value={input}
+            placeholder="Search products"
+            onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+              handleFilterInputChange(e.target.value)
+            }
+          />
+        </div>
+      </div>
+      <p className="font-inter font-medium text-xs text-bl500 ml-[29px]">
+        Showing {minOfPage}-{maxOfPage} of {jsonItens} results.
       </p>
       <div className="justify-center mx-auto flex flex-wrap gap-6 gap-y-8">
         {filteredProducts?.map((produto: IFormDataPayload) => (
           <ProductDiv produto={produto} />
         ))}
       </div>
-      <button onClick={HandlePrev}>prev</button>
-      <p>{page}</p>
-      <button onClick={HandleNext}>next</button>
+      <div className="flex justify-between items-center border border-bl100 rounded-md px-2 mx-auto mt-16 mb-32 w-[152px] h-11 gap-2">
+        <h3 onClick={HandlePrev} className="h-10 w-10 flex items-center justify-center"><ChevronLeft /></h3>
+        <p className="w-10 h-8 bg-w100 rounded-sm flex items-center justify-center font-medium font-inter text-xs text-bl900">{page}</p>
+        <h3 onClick={HandleNext} className="h-10 w-10 flex items-center justify-center"><ChevronRight /></h3>
+      </div>
     </section>
   );
 }

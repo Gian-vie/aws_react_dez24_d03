@@ -24,7 +24,7 @@ const routes = [
   { path: "/perfil" },
   { path: "/carrinho" },
   { path: "/after-payment" },
-  { path: "/detail" },
+  { path: "/detail/:id" },
 ];
 
 function RouteValidator() {
@@ -51,7 +51,7 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/perfil" element={<Perfil />} />
         <Route path="/carrinho" element={<Carrinho />} />
-        <Route path="/detail" element={<ProdDetails />} />
+        <Route path="/detail/:id" element={<ProdDetails />} />
         <Route path="/after-payment" element={<AfterPayment />} />
         <Route path="/page-not-found" element={<PageNotFoundPage />} />
       </Routes>

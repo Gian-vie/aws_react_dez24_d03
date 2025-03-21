@@ -1,4 +1,4 @@
-import AddProduct from "./components/AddProduct";
+// import AddProduct from "./components/AddProduct";
 import CartCounter from "./components/CartCounter";
 import CartListItems from "./components/CartListItems"; 
 import OrderSummary from "./components/OrderSummary";
@@ -12,7 +12,7 @@ function Cart() {
         <span className="text-lg font-bold">Logo</span>
         <CartCounter />
       </header>
-      <AddProduct />
+      {/* <AddProduct /> */}
       <div className="flex flex-col gap-4 w-full">
         <h2 className="text-2xl border-b border-b-gray-300 py-4 w-full">
           Seu Carrinho!

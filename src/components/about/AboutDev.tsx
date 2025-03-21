@@ -3,8 +3,8 @@ const AboutDev = () => {
   return (
     <div>
       <div className="w-full h-50 relative bg-bl900 ">
-      <div className="absolute overflow-hidden bg-center bg-cover bg-[url('/img/dev/gian-dev.png')] h-45 w-45 border-4 border-white rounded-full top-[107px] right-[162px]"></div>
       <div className="absolute overflow-hidden bg-center bg-cover bg-[url('/img/dev/coffee.png')] h-32 w-30 top-7 left-[190px]"></div>
+      <div className="absolute overflow-hidden bg-center bg-cover bg-[url('/img/dev/gian-dev.png')] h-45 w-45 border-4 border-white rounded-full top-[107px] right-[162px]"></div>
       </div>
       <div className="mt-20 mb-[65px] ml-[162px] w-[418px]">
         <h1 className="font-manrope font-extrabold text-2xl text-bl900">
